@@ -126,7 +126,7 @@ const scene = {
       name: 'His breath in the cold',
       particles: {
         kind: 'smoke',
-        at: { on: 'boy', at: [-0.05, -0.15, 0.89] },
+        at: { on: 'boy', at: [-0.05, -0.3, 0.89] },
         rate: 0,
         burst: { on: 'breath', count: 1 },
         life: [2.4, 2.4],
@@ -138,6 +138,7 @@ const scene = {
         spread: 40,
         speed: [0.02, 0.06],
         wind: 0.4,
+        soft: 0.05,
       },
     },
     { id: 'snow', name: 'Falling snow', particles: { kind: 'snow', count: 14000, size: [0.03, 0.03], speed: [0.25, 0.45] } },
