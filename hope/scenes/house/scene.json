@@ -1,0 +1,194 @@
+{
+  "engine": 3,
+  "title": "The House",
+  "horizon": 0.5,
+  "camera": {
+    "mode": "picture"
+  },
+  "light": {
+    "bounce": 0,
+    "haze": 0,
+    "vignette": 0.87,
+    "grain": 0.6
+  },
+  "lights": [
+    {
+      "id": "hope",
+      "of": "near#hope",
+      "reach": 0.01
+    }
+  ],
+  "captions": [
+    {
+      "text": "It has been raining for as long as she remembers.",
+      "at": 3
+    },
+    {
+      "text": "Across the street, a window lights up.",
+      "at": 11
+    }
+  ],
+  "state": {
+    "lit": 0
+  },
+  "states": {
+    "lit": {
+      "range": [
+        0,
+        1
+      ],
+      "smooth": true,
+      "means": "0 — the window across the street is dark; 1 — it is lit (the script lights it 7 s in, over 3 s)"
+    }
+  },
+  "objects": [
+    {
+      "id": "sky",
+      "name": "The night over the city",
+      "sky": true,
+      "box": [
+        -0.7,
+        -0.6,
+        2.48,
+        1.3
+      ]
+    },
+    {
+      "id": "far",
+      "name": "The far row of the city",
+      "across": 0,
+      "distance": 90,
+      "elevation": 0,
+      "height": 32,
+      "box": [
+        -52,
+        -32,
+        52,
+        0
+      ]
+    },
+    {
+      "id": "near",
+      "name": "The near row of the city, one dark window that lights up",
+      "across": 0,
+      "distance": 60,
+      "elevation": 0,
+      "height": 22,
+      "box": [
+        -36,
+        -22,
+        36,
+        0
+      ]
+    },
+    {
+      "id": "rain",
+      "name": "Rain outside",
+      "across": 0,
+      "distance": 3.6,
+      "elevation": 15,
+      "height": 2.5,
+      "box": [
+        -1.5,
+        -3.3,
+        1.5,
+        -0.8
+      ]
+    },
+    {
+      "id": "wall",
+      "name": "The room's wall",
+      "across": 0,
+      "distance": 3.3,
+      "elevation": 15,
+      "height": 6,
+      "box": [
+        -8,
+        -6,
+        8,
+        0
+      ]
+    },
+    {
+      "id": "glass",
+      "name": "The wet pane",
+      "across": 0,
+      "distance": 3.29,
+      "elevation": 15,
+      "height": 2.1,
+      "box": [
+        -1.1,
+        -3.05,
+        1.1,
+        -0.95
+      ]
+    },
+    {
+      "id": "frame",
+      "name": "The window's frame",
+      "across": 0,
+      "distance": 3.28,
+      "elevation": 15,
+      "height": 2.2,
+      "box": [
+        -1.15,
+        -3.12,
+        1.15,
+        -0.95
+      ]
+    },
+    {
+      "id": "sill",
+      "name": "The sill",
+      "across": 0,
+      "distance": 3.2,
+      "elevation": 15,
+      "height": 0.2,
+      "box": [
+        -1.2,
+        -1.02,
+        1.2,
+        -0.88
+      ]
+    },
+    {
+      "id": "floor",
+      "name": "The floor",
+      "plane": true,
+      "across": 0,
+      "distance": 1.6,
+      "elevation": 15,
+      "width": 10,
+      "depth": 3.2,
+      "walk": true
+    },
+    {
+      "id": "curtain",
+      "name": "The curtain",
+      "across": 0,
+      "distance": 3.1,
+      "elevation": 15,
+      "height": 3.3,
+      "box": [
+        -1.35,
+        -3.25,
+        1.35,
+        0
+      ]
+    },
+    {
+      "id": "girl",
+      "name": "The girl on the sill",
+      "across": 0.624,
+      "distance": 3.25,
+      "elevation": 15.985,
+      "height": 0.75,
+      "box": [
+        -0.45,
+        -0.75,
+        0.25,
+        0.02
+      ]
+    }
+  ]
+}

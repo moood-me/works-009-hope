@@ -1,0 +1,5 @@
+{"strings": [
+  {"text":"The House","translation":"Дом","where":"scenes/house/scene.json title"},
+  {"text":"It has been raining for as long as she remembers.","translation":"Дождь идёт столько, сколько она себя помнит.","where":"scenes/house/scene.json captions[0] text"},
+  {"text":"Across the street, a window lights up.","translation":"Через улицу зажигается окно.","where":"scenes/house/scene.json captions[1] text"}
+]}
