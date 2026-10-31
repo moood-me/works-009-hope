@@ -12,8 +12,10 @@ streaks drifting on the water, rings spreading where her foot touches it.
 - `shore` 2 km off: the design's spiky trees on the horizon, open water between 0.42 and 0.83 of the frame.
 - `lake`: one water plane that mirrors (strength 0.3: the design's reflections are its pier, girl and shore at 0.3–0.35,
   with no ripple). Its shader paints the design's water in the frame's terms — its gradient, the sun's path of 26
-  breathing dashes and 110 drifting streaks — and, since a mirror always holds the sky and the design's water shows
-  none, paints what under that much mirrored sky gives the design's colour (`u_mirror` = the reflect strength).
+  breathing dashes and 110 drifting streaks. A mirror always holds the sky, and the design's water shows none: the
+  shader can paint what under that much mirrored sky gives the design's colour (`u_mirror`), but then the reflections
+  of the pier and the girl come out darker than the design's; it is 0 now (the paint is the design's own), and a
+  mirror that holds no sky is asked of the engine (three) — with it, the water and the reflections are both exact.
 - `mist` at 30 m: the design's seven long soft blobs on the far water, by its shader (strength turned into linear
   light's over the pale water there).
 - `pier` at 9.71 m (where the water line under it, 0.735 of the frame, is): deck at 0.68, posts every 0.09 of the
