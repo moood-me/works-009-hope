@@ -2,13 +2,19 @@
   "engine": 3,
   "title": "Hope",
   "horizon": 0.7,
-  "camera": { "mode": "picture" },
+  "camera": {
+    "mode": "picture"
+  },
   "light": {
     "bounce": 0,
     "haze": 0,
     "vignette": 0.96,
     "grain": 0.8,
-    "wind": [1, 0, 0.15]
+    "wind": [
+      1,
+      0,
+      0.15
+    ]
   },
   "widgets": [
     {
@@ -26,25 +32,50 @@
       "id": "sky",
       "name": "The night sky over the hill",
       "sky": true,
-      "box": [-0.7, -0.6, 2.48, 1.3]
+      "box": [
+        -0.7,
+        -0.6,
+        2.48,
+        1.3
+      ]
     },
     {
       "id": "fog_far",
       "name": "Fog drifting behind the hill",
       "across": 0,
-      "distance": 200,
-      "elevation": -50,
-      "height": 130,
-      "box": [-320, -130, 320, 0]
+      "distance": 21,
+      "elevation": 0,
+      "height": 9,
+      "box": [
+        -36,
+        -9,
+        36,
+        0
+      ]
+    },
+    {
+      "id": "ground",
+      "name": "The dark ground before the hill",
+      "plane": true,
+      "across": 0,
+      "distance": 9.6,
+      "elevation": 0,
+      "width": 90,
+      "depth": 19.2
     },
     {
       "id": "hill",
       "name": "The dark hill",
       "across": 0,
       "distance": 19,
-      "elevation": -6,
-      "height": 7.5,
-      "box": [-45, -7.4, 45, 0]
+      "elevation": 0,
+      "height": 1.5,
+      "box": [
+        -45,
+        -1.4,
+        45,
+        0
+      ]
     },
     {
       "id": "child",
@@ -53,16 +84,26 @@
       "distance": 18.95,
       "elevation": 1.225,
       "height": 1.1,
-      "box": [-0.5, -1.15, 0.6, 0.03]
+      "box": [
+        -0.5,
+        -1.15,
+        0.6,
+        0.03
+      ]
     },
     {
       "id": "fog_near",
       "name": "Fog drifting before the hill",
       "across": 0,
-      "distance": 12,
-      "elevation": -3,
-      "height": 5.6,
-      "box": [-28, -5.6, 28, 0]
+      "distance": 7,
+      "elevation": 0,
+      "height": 2.4,
+      "box": [
+        -16,
+        -2.4,
+        16,
+        0
+      ]
     },
     {
       "id": "snow",
@@ -70,8 +111,14 @@
       "particles": {
         "kind": "snow",
         "count": 1500,
-        "size": [0.012, 0.012],
-        "speed": [0.15, 0.4],
+        "size": [
+          0.012,
+          0.012
+        ],
+        "speed": [
+          0.15,
+          0.4
+        ],
         "opacity": 0.5,
         "color": "#dce1eb"
       }
