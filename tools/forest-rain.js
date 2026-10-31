@@ -1,7 +1,8 @@
 // Generates hope/scenes/forest-rain/scene.json and the small code files of its pine kinds and grass tufts.
 // The design (hope/web/hope-design/Hope.dc.html, draw_forest) drew three rows of pines across the screen on base
 // lines at 0.62, 0.70 and 0.78 of its height; here each row stands at the distance its base line means (eye 1.7 m,
-// horizon 0.6, focal length = the frame's height), each tree a copy of one of three painted kinds of its row.
+// horizon 0.6, focal length = the frame's height), each tree a copy of one of six painted kinds of its row, each kind
+// swaying at a phase of its own (lib.js pineSway).
 // Run: node tools/forest-rain.js   (from the repository's root)
 const fs = require('fs');
 const path = require('path');
@@ -19,7 +20,7 @@ function seeded(seed) {
 const ASPECT = 16 / 9;
 const HORIZON = 0.6;
 const EYE = 1.7;
-const VARIANTS = 3;
+const VARIANTS = 6;
 const round = (v, n) => Math.round(v * 10 ** n) / 10 ** n;
 const base = i => 0.62 + 0.08 * i;
 const dist = y => EYE / (y - HORIZON);
@@ -41,6 +42,10 @@ for (let i = 0; i < 3; i++) {
     kinds[Math.floor(rnd() * VARIANTS)].push(copy);
   }
   kinds.forEach((copies, v) => {
+    // (a kind no tree of the row fell to is not made)
+    if (!copies.length) {
+      return;
+    }
     const h = rowHeight(i);
     pines.push({
       id: 'pine_' + i + '_' + v,
@@ -121,6 +126,7 @@ fs.mkdirSync(path.join(dir, 'elements'), { recursive: true });
 fs.writeFileSync(path.join(dir, 'scene.json'), JSON.stringify(scene, null, 2) + '\n');
 for (const p of pines) {
   fs.writeFileSync(path.join(dir, 'elements', p.id + '.js'), '// one painted kind of its row (lib.js pineKind); tools/forest-rain.js lays its copies\ne.lib.pineKind(g, e);\n');
+  fs.writeFileSync(path.join(dir, 'elements', p.id + '.animate.js'), '// its slow sway, the design\'s (lib.js pineSway)\ne.lib.pineSway(e);\n');
 }
 for (const t of tufts) {
   fs.writeFileSync(path.join(dir, 'elements', t.id + '.js'), '// one kind of grass tuft (lib.js tuft); tools/forest-rain.js lays its copies\ne.lib.tuft(g, e);\n');

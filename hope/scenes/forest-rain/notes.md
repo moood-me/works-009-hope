@@ -13,7 +13,9 @@ from the repository's root; the fog's shader text is `tools/forest-rain-fog.wgsl
 - `sky`: the design's gradient; its shader lays the hazy moon (two radial glows at 0.27 of the width, 0.2 of the
   height) in the screen's colours, as the design's canvas did.
 - Three rows of pines at the distances their base lines mean (0.62, 0.70, 0.78 of the frame → 85, 17 and 9.4 m),
-  each tree a copy of one of three kinds of its row, swaying from its foot in the wind. `ground` gives each row's
+  each tree a copy of one of six kinds of its row, swaying from its foot as the design's did — slowly, sin(0.5 t),
+  0.012 · (row + 1) of its height at the top — each kind at a phase of its own (lib.js pineSway; the design took the
+  phase from each tree's place). `ground` gives each row's
   colour from its foot to the next row (the design filled below each base with the row's colour).
 - `fog_0…2`: the design's fog at each row's foot, drawn by one shader text in the frame's terms; its strength is
   turned into the linear light's that gives the design's colour over the row's colour. Painted, so faint a gradient
