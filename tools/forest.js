@@ -87,7 +87,7 @@ const scene = {
   title: 'The Forest',
   horizon: HORIZON,
   camera: { mode: 'picture' },
-  light: { bounce: 0, haze: 0, vignette: 0.87, grain: 0.6, wind: [1, 0, 0.6] },
+  light: { bounce: 0, haze: 0, vignette: 0.87, grain: 0.6, wind: [1, 0, 0.2] },
   captions: [
     { text: 'The snow has covered every path back.', at: 3 },
     { text: 'But somewhere between the trees, a light is on.', at: 11 },
@@ -138,7 +138,7 @@ const scene = {
         wind: 0.4,
       },
     },
-    { id: 'snow', name: 'Falling snow', particles: { kind: 'snow', count: 3000 } },
+    { id: 'snow', name: 'Falling snow', particles: { kind: 'snow', count: 14000, size: [0.03, 0.03], speed: [0.25, 0.45] } },
   ],
 };
 
