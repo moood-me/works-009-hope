@@ -1,0 +1,41 @@
+<style>
+  :host { display: block; }
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #c9ced6;
+    text-align: center;
+    pointer-events: none;
+  }
+  .name {
+    font-size: 56px;
+    letter-spacing: 0.3em;
+    padding-left: 0.3em;
+    color: #e8ebf0;
+    line-height: 1.15;
+  }
+  .below {
+    min-height: 3em;
+    font-size: 16px;
+  }
+  .tag {
+    margin: 0;
+    font-style: italic;
+    animation: breathe 5s ease-in-out infinite;
+  }
+  @keyframes breathe {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.8; }
+  }
+</style>
+<div class="page">
+  <div class="name">HOPE</div>
+  <div class="below">
+    <p class="tag">in development. there is hope.</p>
+  </div>
+</div>
