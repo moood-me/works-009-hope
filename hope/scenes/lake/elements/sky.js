@@ -31,7 +31,7 @@ for (const c of craters) {
   g.fill();
 }
 e.at(mx, my, 'moon');
-e.light(mx, my, 0.35, '#d7dcf5', 0.5, 'moon');
+e.light(mx, my, 0.45, '#d7dcf5', 0.8, 'moon');
 
 // Stars: each one's colour carries its twinkle — red its phase, green its pace — and the shader
 // shows them all in #e2e5ff. Denser toward the top, as the original; none near the moon.

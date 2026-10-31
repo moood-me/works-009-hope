@@ -1,11 +1,11 @@
-// The snow seen from above (origin at 200 m, y toward the viewer). Far off, under the trees, it is the grey
+// The snow seen from above (origin at 2000 m, y toward the viewer). Far off, under the trees, it is the grey
 // of the fog; the clearing before us is the original's ground: pale near the feet, greying with distance,
 // its far rim wavering. His footprints come from behind us to where he stands (the original's path, its
 // screen points turned into metres on the snow).
 const lib = e.lib;
-const toY = d => 200 - d;
+const toY = d => 2000 - d;
 g.fillStyle = '#7f8997';
-g.fillRect(-200, -200, 400, 400);
+g.fillRect(-4000, -2000, 8000, 4000);
 
 const n = lib.noise1D(4);
 const gr = g.createLinearGradient(0, toY(17), 0, toY(4.5));
@@ -14,11 +14,11 @@ gr.addColorStop(0.68, '#a1aab6');
 gr.addColorStop(1, '#c4cbd4');
 g.fillStyle = gr;
 g.beginPath();
-g.moveTo(-200, 200);
+g.moveTo(-200, 2000);
 for (let x = -200; x <= 200; x += 0.5) {
   g.lineTo(x, toY(16 + 3 * (n(x / 18) - 0.5)));
 }
-g.lineTo(200, 200);
+g.lineTo(200, 2000);
 g.closePath();
 g.fill();
 
@@ -31,6 +31,6 @@ for (let i = 1; i < 30; i++) {
   const d = lib.EYE / (sy - lib.HORIZON);
   const across = (sx - A / 2) * d + (i % 2 ? 1 : -1) * 0.06;
   g.beginPath();
-  g.ellipse(across, toY(d), 0.035, 0.065, 0, 0, Math.PI * 2);
+  g.ellipse(across, toY(d), 0.05, 0.06, 0, 0, Math.PI * 2);
   g.fill();
 }

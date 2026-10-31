@@ -87,14 +87,14 @@ const scene = {
   title: 'The Forest',
   horizon: HORIZON,
   camera: { mode: 'picture' },
-  light: { bounce: 0, haze: 0, vignette: 0.87, grain: 0.6, wind: [1, 0, 0.6] },
+  light: { bounce: 0, haze: 0, vignette: 0.87, grain: 0.6, wind: [1, 0, 0.2] },
   captions: [
     { text: 'The snow has covered every path back.', at: 3 },
     { text: 'But somewhere between the trees, a light is on.', at: 11 },
   ],
   objects: [
     { id: 'sky', name: 'Overcast winter sky', sky: true, box: [-0.7, -0.6, 2.48, 1.3] },
-    { id: 'ground', name: 'Snow', plane: true, across: 0, distance: 200, elevation: 0, width: 400, depth: 400 },
+    { id: 'ground', name: 'Snow', plane: true, across: 0, distance: 2000, elevation: 0, width: 8000, depth: 4000 },
     ...pines,
     ...mists,
     {
@@ -126,6 +126,7 @@ const scene = {
         kind: 'smoke',
         at: { on: 'boy', at: [-0.05, -0.15, 0.89] },
         rate: 0,
+        burst: { count: 1 },
         life: [2.4, 2.4],
         size: [0.09, 0.37],
         color: '#e1e6f0',
@@ -137,7 +138,7 @@ const scene = {
         wind: 0.4,
       },
     },
-    { id: 'snow', name: 'Falling snow', particles: { kind: 'snow', count: 3000 } },
+    { id: 'snow', name: 'Falling snow', particles: { kind: 'snow', count: 14000, size: [0.03, 0.03], speed: [0.25, 0.45] } },
   ],
 };
 

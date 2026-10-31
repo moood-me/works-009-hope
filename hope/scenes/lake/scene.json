@@ -60,7 +60,7 @@
       "width": 16000,
       "depth": 6000,
       "water": true,
-      "reflect": { "strength": 0.8, "fade": 0, "rough": 0.3, "ripple": 0.6 }
+      "reflect": { "strength": 0.55, "fade": 0, "rough": 0.08, "ripple": 0.5 }
     },
     {
       "id": "pier",
@@ -102,7 +102,10 @@
         "source": [12, 8, 1.0],
         "rate": 0.4,
         "life": [14, 18],
-        "color": "#ffcd78"
+        "color": "#ffcd78",
+        "size": [0.32, 0.32],
+        "glow": [1.2, 1.2],
+        "blink": 0.6
       }
     }
   ]
