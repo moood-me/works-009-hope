@@ -130,7 +130,7 @@ const scene = {
         rate: 0,
         burst: { on: 'breath', count: 1 },
         life: [2.4, 2.4],
-        size: [0.09, 0.37],
+        size: [0.19, 0.73],
         color: '#e1e6f0',
         opacity: 0.3,
         gravity: -0.05,
