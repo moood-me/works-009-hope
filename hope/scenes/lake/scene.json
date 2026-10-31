@@ -7,7 +7,9 @@
     "ambient": 0.5,
     "ambientColor": "#c0c8ff",
     "bounce": 0,
-    "haze": 0,
+    "haze": 0.02,
+    "hazeColor": "#3a3658",
+    "shafts": 0.8,
     "vignette": 0.87,
     "grain": 0.6,
     "wind": [1, 0, 0.3]
@@ -95,15 +97,15 @@
       "id": "fireflies",
       "name": "Fireflies over the water",
       "across": 0,
-      "distance": 7,
+      "distance": 8,
       "elevation": 0.9,
       "particles": {
         "kind": "fireflies",
-        "source": [12, 8, 1.0],
+        "source": [12, 6, 1.0],
         "rate": 0.4,
         "life": [14, 18],
         "color": "#ffcd78",
-        "size": [0.32, 0.32],
+        "size": [0.22, 0.22],
         "glow": [1.2, 1.2],
         "blink": 0.6
       }
