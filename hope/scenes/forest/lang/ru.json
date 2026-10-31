@@ -1,0 +1,5 @@
+{"strings": [
+  {"text":"The Forest","translation":"Лес","where":"scenes/forest/scene.json title"},
+  {"text":"The snow has covered every path back.","translation":"Снег замёл все дороги назад.","where":"scenes/forest/scene.json captions[0] text"},
+  {"text":"But somewhere between the trees, a light is on.","translation":"Но где-то между деревьями горит свет.","where":"scenes/forest/scene.json captions[1] text"}
+]}
