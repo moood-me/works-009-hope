@@ -73,6 +73,8 @@ const rowIds = i => pines.filter(p => p.id.startsWith('pine_' + i + '_')).map(p 
 // the fog among each row (the design's fog at the row's foot): nearer than the row, so its soft lower half lies
 // over the row's ground before the next row
 const fogDist = [21, 10.6, 6.9];
+// each row's colour: what its fog lies over (its shader turns the design's screen-colour strength into linear light's)
+const BG = [[0x27, 0x39, 0x3d], [0x18, 0x27, 0x2a], [0x0e, 0x18, 0x1a]];
 const fogs = [0, 1, 2].map(i => ({
   id: 'fog_' + i,
   name: 'Fog at the foot of row ' + (i + 1),
@@ -81,7 +83,14 @@ const fogs = [0, 1, 2].map(i => ({
   height: round(0.25 * fogDist[i], 2),
   box: [round(-1.7 * fogDist[i], 1), round(-0.25 * fogDist[i], 2), round(1.7 * fogDist[i], 1), 0],
   inFront: rowIds(i),
+  uniforms: { dist: fogDist[i], row: i, base: round(base(i), 3), strength: round(1.2 - 0.2 * i, 2), bgr: round(BG[i][0] / 255, 4), bgg: round(BG[i][1] / 255, 4), bgb: round(BG[i][2] / 255, 4) },
 }));
+// the fireflies' glows and the soft light round her are glows only: they light nothing (reach)
+const FLIES = 16;
+const glowsOnly = [{ id: 'aura', of: 'girl#aura', reach: 0.01 }];
+for (let f = 0; f < FLIES; f++) {
+  glowsOnly.push({ id: 'fly' + f, of: 'fireflies#f' + f, reach: 0.01 });
+}
 
 const scene = {
   engine: 3,
@@ -89,6 +98,7 @@ const scene = {
   horizon: HORIZON,
   camera: { mode: 'picture' },
   light: { bounce: 0, haze: 0, vignette: 0.96, grain: 0.8, wind: [1, 0, 0.6] },
+  lights: glowsOnly,
   state: { rest: 0 },
   states: { rest: { range: [0, 1], smooth: true, means: '0 — the fireflies all wander; 1 — one of them has settled on her knee (the script brings it when all is still)' } },
   objects: [
@@ -97,11 +107,11 @@ const scene = {
     ...pines,
     ...fogs,
     { id: 'bank', name: 'The near bank', across: 0, distance: 6.3, height: 0.3, box: [-14, -0.3, 14, 0] },
-    { id: 'tree', name: 'The big tree she leans by', across: 2.25, distance: 6.4, height: 8, box: [-2.4, -8, 0.8, 0] },
-    { id: 'girl', name: 'The girl hugging her knees', x: 0.672, distance: 6.2, elevation: 0.05, height: 0.8, box: [-0.6, -1.0, 0.45, 0.03] },
-    { id: 'scarf', name: 'Her scarf', on: 'girl', distance: -0.03, height: 0.4, box: [-0.1, -0.7, 0.35, -0.35], uniforms: { wind: 0, bob: 0, flap: 0 } },
+    { id: 'tree', name: 'The big tree she leans by', across: 2.28, distance: 6.4, height: 8, box: [-2.4, -8, 0.8, 0] },
+    { id: 'girl', name: 'The girl hugging her knees', x: 0.672, distance: 6.2, elevation: 0.1, height: 0.8, box: [-0.6, -1.0, 0.45, 0.03] },
+    { id: 'scarf', name: 'Her scarf', on: 'girl', distance: -0.03, height: 0.4, box: [-0.05, -0.62, 0.32, -0.36] },
     ...tufts,
-    { id: 'fireflies', name: 'Fireflies', across: 0, distance: 7.2, height: 4, box: [-7, -4.4, 7, 0], glows: true },
+    { id: 'fireflies', name: 'Fireflies', across: 0, distance: 7.2, height: 4, box: [-7, -4.4, 7, 0], glows: true, inFront: ['girl', 'scarf', 'tree', 'bank', ...tufts.map(t => t.id)] },
     { id: 'rain', name: 'The rain that is always here', particles: { kind: 'rain', count: 3000, opacity: 0.22, color: '#aac3c8', wind: 1 } },
   ],
 };
@@ -116,6 +126,7 @@ for (const t of tufts) {
   fs.writeFileSync(path.join(dir, 'elements', t.id + '.js'), '// one kind of grass tuft (lib.js tuft); tools/forest-rain.js lays its copies\ne.lib.tuft(g, e);\n');
 }
 for (const f of fogs) {
-  fs.writeFileSync(path.join(dir, 'elements', f.id + '.js'), '// the fog at the foot of its row (lib.js rowFog)\ne.lib.rowFog(g, e);\n');
+  fs.writeFileSync(path.join(dir, 'elements', f.id + '.js'), '// the fog at the foot of its row is drawn wholly by its shader (' + f.id + '.wgsl: the same text for every row)\n');
+  fs.copyFileSync(path.join(__dirname, 'forest-rain-fog.wgsl'), path.join(dir, 'elements', f.id + '.wgsl'));
 }
 console.log(pines.map(p => p.id + ':' + p.copies.length).join(' '), tufts.map(t => t.copies.length).join(','));

@@ -1,0 +1,1565 @@
+{
+  "engine": 3,
+  "title": "Rain in the Forest",
+  "horizon": 0.6,
+  "camera": {
+    "mode": "picture"
+  },
+  "light": {
+    "bounce": 0,
+    "haze": 0,
+    "vignette": 0.96,
+    "grain": 0.8,
+    "wind": [
+      1,
+      0,
+      0.6
+    ]
+  },
+  "lights": [
+    {
+      "id": "aura",
+      "of": "girl#aura",
+      "reach": 0.01
+    },
+    {
+      "id": "fly0",
+      "of": "fireflies#f0",
+      "reach": 0.01
+    },
+    {
+      "id": "fly1",
+      "of": "fireflies#f1",
+      "reach": 0.01
+    },
+    {
+      "id": "fly2",
+      "of": "fireflies#f2",
+      "reach": 0.01
+    },
+    {
+      "id": "fly3",
+      "of": "fireflies#f3",
+      "reach": 0.01
+    },
+    {
+      "id": "fly4",
+      "of": "fireflies#f4",
+      "reach": 0.01
+    },
+    {
+      "id": "fly5",
+      "of": "fireflies#f5",
+      "reach": 0.01
+    },
+    {
+      "id": "fly6",
+      "of": "fireflies#f6",
+      "reach": 0.01
+    },
+    {
+      "id": "fly7",
+      "of": "fireflies#f7",
+      "reach": 0.01
+    },
+    {
+      "id": "fly8",
+      "of": "fireflies#f8",
+      "reach": 0.01
+    },
+    {
+      "id": "fly9",
+      "of": "fireflies#f9",
+      "reach": 0.01
+    },
+    {
+      "id": "fly10",
+      "of": "fireflies#f10",
+      "reach": 0.01
+    },
+    {
+      "id": "fly11",
+      "of": "fireflies#f11",
+      "reach": 0.01
+    },
+    {
+      "id": "fly12",
+      "of": "fireflies#f12",
+      "reach": 0.01
+    },
+    {
+      "id": "fly13",
+      "of": "fireflies#f13",
+      "reach": 0.01
+    },
+    {
+      "id": "fly14",
+      "of": "fireflies#f14",
+      "reach": 0.01
+    },
+    {
+      "id": "fly15",
+      "of": "fireflies#f15",
+      "reach": 0.01
+    }
+  ],
+  "state": {
+    "rest": 0
+  },
+  "states": {
+    "rest": {
+      "range": [
+        0,
+        1
+      ],
+      "smooth": true,
+      "means": "0 — the fireflies all wander; 1 — one of them has settled on her knee (the script brings it when all is still)"
+    }
+  },
+  "objects": [
+    {
+      "id": "sky",
+      "name": "The night over the forest, a hazy moon",
+      "sky": true,
+      "box": [
+        -0.7,
+        -0.6,
+        2.48,
+        1.3
+      ]
+    },
+    {
+      "id": "ground",
+      "name": "The forest floor",
+      "plane": true,
+      "across": 0,
+      "distance": 42.5,
+      "elevation": 0,
+      "width": 200,
+      "depth": 85
+    },
+    {
+      "id": "pine_0_0",
+      "name": "Pines, row 1 from the back",
+      "across": 0,
+      "distance": 85,
+      "height": 22.1,
+      "box": [
+        -6.63,
+        -22.98,
+        6.63,
+        0
+      ],
+      "copies": [
+        {
+          "across": -106.82,
+          "distance": 85.33,
+          "scale": 1.019
+        },
+        {
+          "across": -103.54,
+          "distance": 85.11,
+          "scale": 0.933
+        },
+        {
+          "across": -85.45,
+          "distance": 85.31,
+          "scale": 1.028
+        },
+        {
+          "across": -82.06,
+          "distance": 85.2,
+          "scale": 0.878,
+          "flip": true
+        },
+        {
+          "across": -77.97,
+          "distance": 85.34,
+          "scale": 1.152,
+          "flip": true
+        },
+        {
+          "across": -66.91,
+          "distance": 85.1,
+          "scale": 0.758,
+          "flip": true
+        },
+        {
+          "across": -64.41,
+          "distance": 85.23,
+          "scale": 0.858,
+          "flip": true
+        },
+        {
+          "across": -61.04,
+          "distance": 85.01,
+          "scale": 1.225,
+          "flip": true
+        },
+        {
+          "across": -52.91,
+          "distance": 85.35,
+          "scale": 1.106
+        },
+        {
+          "across": -45.63,
+          "distance": 85.06,
+          "scale": 1.218
+        },
+        {
+          "across": -41.94,
+          "distance": 85.19,
+          "scale": 1.036,
+          "flip": true
+        },
+        {
+          "across": -31.21,
+          "distance": 85.3,
+          "scale": 1.09
+        },
+        {
+          "across": -26.62,
+          "distance": 85.15,
+          "scale": 0.726,
+          "flip": true
+        },
+        {
+          "across": -24.48,
+          "distance": 85.16,
+          "scale": 0.86
+        },
+        {
+          "across": -22.47,
+          "distance": 85.12,
+          "scale": 1.173
+        },
+        {
+          "across": -12.93,
+          "distance": 85.39,
+          "scale": 0.756,
+          "flip": true
+        },
+        {
+          "across": 11.45,
+          "distance": 85.14,
+          "scale": 0.703
+        },
+        {
+          "across": 16.1,
+          "distance": 85.3,
+          "scale": 1.095
+        },
+        {
+          "across": 21.8,
+          "distance": 85.28,
+          "scale": 1.092,
+          "flip": true
+        },
+        {
+          "across": 25.06,
+          "distance": 85.37,
+          "scale": 0.923
+        },
+        {
+          "across": 26.97,
+          "distance": 85.22,
+          "scale": 0.856,
+          "flip": true
+        },
+        {
+          "across": 34.39,
+          "distance": 85.26,
+          "scale": 1.028,
+          "flip": true
+        },
+        {
+          "across": 38.9,
+          "distance": 85.01,
+          "scale": 0.944
+        },
+        {
+          "across": 41.54,
+          "distance": 85.11,
+          "scale": 0.815,
+          "flip": true
+        },
+        {
+          "across": 46.33,
+          "distance": 85.05,
+          "scale": 0.773
+        },
+        {
+          "across": 57.86,
+          "distance": 85.36,
+          "scale": 0.883,
+          "flip": true
+        },
+        {
+          "across": 66.3,
+          "distance": 85.03,
+          "scale": 0.83
+        },
+        {
+          "across": 70.84,
+          "distance": 85.38,
+          "scale": 1.173
+        },
+        {
+          "across": 77.38,
+          "distance": 85.38,
+          "scale": 0.931
+        },
+        {
+          "across": 78.82,
+          "distance": 85.03,
+          "scale": 0.743
+        },
+        {
+          "across": 80.69,
+          "distance": 85.36,
+          "scale": 0.76
+        },
+        {
+          "across": 98.2,
+          "distance": 85.3,
+          "scale": 1.092,
+          "flip": true
+        },
+        {
+          "across": 101.76,
+          "distance": 85.15,
+          "scale": 1.064,
+          "flip": true
+        }
+      ]
+    },
+    {
+      "id": "pine_0_1",
+      "name": "Pines, row 1 from the back",
+      "across": 0,
+      "distance": 85,
+      "height": 22.1,
+      "box": [
+        -6.63,
+        -22.98,
+        6.63,
+        0
+      ],
+      "copies": [
+        {
+          "across": -113.81,
+          "distance": 85.29,
+          "scale": 1.126,
+          "flip": true
+        },
+        {
+          "across": -92.89,
+          "distance": 85.21,
+          "scale": 1.274,
+          "flip": true
+        },
+        {
+          "across": -71.09,
+          "distance": 85.03,
+          "scale": 0.99,
+          "flip": true
+        },
+        {
+          "across": -56.57,
+          "distance": 85.35,
+          "scale": 1.172,
+          "flip": true
+        },
+        {
+          "across": -49.27,
+          "distance": 85.33,
+          "scale": 0.796,
+          "flip": true
+        },
+        {
+          "across": -34.57,
+          "distance": 85.07,
+          "scale": 0.73
+        },
+        {
+          "across": -19.3,
+          "distance": 85.22,
+          "scale": 0.944
+        },
+        {
+          "across": -16.79,
+          "distance": 85.05,
+          "scale": 1.188,
+          "flip": true
+        },
+        {
+          "across": -8.17,
+          "distance": 85.01,
+          "scale": 0.784,
+          "flip": true
+        },
+        {
+          "across": -6.2,
+          "distance": 85.29,
+          "scale": 1.152
+        },
+        {
+          "across": 5.66,
+          "distance": 85.19,
+          "scale": 0.868
+        },
+        {
+          "across": 9.23,
+          "distance": 85.32,
+          "scale": 1.274
+        },
+        {
+          "across": 20.3,
+          "distance": 85.05,
+          "scale": 0.991,
+          "flip": true
+        },
+        {
+          "across": 62.19,
+          "distance": 85.16,
+          "scale": 0.742
+        },
+        {
+          "across": 63.97,
+          "distance": 85.23,
+          "scale": 0.897,
+          "flip": true
+        },
+        {
+          "across": 72.63,
+          "distance": 85.02,
+          "scale": 1.27
+        },
+        {
+          "across": 83.15,
+          "distance": 85.06,
+          "scale": 0.915
+        },
+        {
+          "across": 85.42,
+          "distance": 85.38,
+          "scale": 0.781,
+          "flip": true
+        },
+        {
+          "across": 87.32,
+          "distance": 85.36,
+          "scale": 1.003,
+          "flip": true
+        },
+        {
+          "across": 90.95,
+          "distance": 85.14,
+          "scale": 0.873,
+          "flip": true
+        },
+        {
+          "across": 105.57,
+          "distance": 85.07,
+          "scale": 1.296,
+          "flip": true
+        }
+      ]
+    },
+    {
+      "id": "pine_0_2",
+      "name": "Pines, row 1 from the back",
+      "across": 0,
+      "distance": 85,
+      "height": 22.1,
+      "box": [
+        -6.63,
+        -22.98,
+        6.63,
+        0
+      ],
+      "copies": [
+        {
+          "across": -110.88,
+          "distance": 85.05,
+          "scale": 0.997
+        },
+        {
+          "across": -100.91,
+          "distance": 85.33,
+          "scale": 1.267
+        },
+        {
+          "across": -96.22,
+          "distance": 85.26,
+          "scale": 1.072,
+          "flip": true
+        },
+        {
+          "across": -88.02,
+          "distance": 85.03,
+          "scale": 0.752,
+          "flip": true
+        },
+        {
+          "across": -75.04,
+          "distance": 85.13,
+          "scale": 1.181,
+          "flip": true
+        },
+        {
+          "across": -62.44,
+          "distance": 85.16,
+          "scale": 1.17
+        },
+        {
+          "across": -54.44,
+          "distance": 85.07,
+          "scale": 0.823
+        },
+        {
+          "across": -47.22,
+          "distance": 85.15,
+          "scale": 1.076,
+          "flip": true
+        },
+        {
+          "across": -43.73,
+          "distance": 85.14,
+          "scale": 0.986
+        },
+        {
+          "across": -37.26,
+          "distance": 85.18,
+          "scale": 0.87
+        },
+        {
+          "across": -2.26,
+          "distance": 85.33,
+          "scale": 1.281,
+          "flip": true
+        },
+        {
+          "across": 2.1,
+          "distance": 85.12,
+          "scale": 0.754
+        },
+        {
+          "across": 29.77,
+          "distance": 85.02,
+          "scale": 1.219
+        },
+        {
+          "across": 49.89,
+          "distance": 85.24,
+          "scale": 0.985
+        },
+        {
+          "across": 52.83,
+          "distance": 85.13,
+          "scale": 1.242
+        },
+        {
+          "across": 55.16,
+          "distance": 85.31,
+          "scale": 1.228,
+          "flip": true
+        },
+        {
+          "across": 59.51,
+          "distance": 85.18,
+          "scale": 0.873,
+          "flip": true
+        },
+        {
+          "across": 94.45,
+          "distance": 85.29,
+          "scale": 0.714,
+          "flip": true
+        },
+        {
+          "across": 107.74,
+          "distance": 85.38,
+          "scale": 1.006,
+          "flip": true
+        },
+        {
+          "across": 111.62,
+          "distance": 85.35,
+          "scale": 0.769
+        }
+      ]
+    },
+    {
+      "id": "pine_1_0",
+      "name": "Pines, row 2 from the back",
+      "across": 0,
+      "distance": 17,
+      "height": 6.63,
+      "box": [
+        -1.99,
+        -6.9,
+        1.99,
+        0
+      ],
+      "copies": [
+        {
+          "across": -20.99,
+          "distance": 17.23,
+          "scale": 0.745,
+          "flip": true
+        },
+        {
+          "across": -13.86,
+          "distance": 17.35,
+          "scale": 0.979,
+          "flip": true
+        },
+        {
+          "across": -12.66,
+          "distance": 17.26,
+          "scale": 1.116
+        },
+        {
+          "across": -10.83,
+          "distance": 17.29,
+          "scale": 0.815
+        },
+        {
+          "across": -9.49,
+          "distance": 17.32,
+          "scale": 1.288,
+          "flip": true
+        },
+        {
+          "across": -8.05,
+          "distance": 17.21,
+          "scale": 0.887,
+          "flip": true
+        },
+        {
+          "across": -6.71,
+          "distance": 17.27,
+          "scale": 1.265,
+          "flip": true
+        },
+        {
+          "across": 4.56,
+          "distance": 17,
+          "scale": 0.737
+        },
+        {
+          "across": 6.51,
+          "distance": 17.02,
+          "scale": 0.829
+        },
+        {
+          "across": 20.2,
+          "distance": 17.13,
+          "scale": 0.895,
+          "flip": true
+        }
+      ]
+    },
+    {
+      "id": "pine_1_1",
+      "name": "Pines, row 2 from the back",
+      "across": 0,
+      "distance": 17,
+      "height": 6.63,
+      "box": [
+        -1.99,
+        -6.9,
+        1.99,
+        0
+      ],
+      "copies": [
+        {
+          "across": -22.76,
+          "distance": 17.29,
+          "scale": 1.099
+        },
+        {
+          "across": -20.34,
+          "distance": 17.14,
+          "scale": 1.155
+        },
+        {
+          "across": -18.7,
+          "distance": 17.36,
+          "scale": 0.932,
+          "flip": true
+        },
+        {
+          "across": -15.72,
+          "distance": 17.25,
+          "scale": 1.16,
+          "flip": true
+        },
+        {
+          "across": -5.28,
+          "distance": 17.39,
+          "scale": 1.25,
+          "flip": true
+        },
+        {
+          "across": -4.16,
+          "distance": 17.38,
+          "scale": 1.062
+        },
+        {
+          "across": -0.37,
+          "distance": 17.17,
+          "scale": 0.81,
+          "flip": true
+        },
+        {
+          "across": 2.62,
+          "distance": 17.29,
+          "scale": 1.025
+        },
+        {
+          "across": 8.62,
+          "distance": 17.01,
+          "scale": 1.287
+        },
+        {
+          "across": 12.51,
+          "distance": 17.38,
+          "scale": 1.198,
+          "flip": true
+        },
+        {
+          "across": 14.5,
+          "distance": 17.18,
+          "scale": 0.853,
+          "flip": true
+        },
+        {
+          "across": 15.31,
+          "distance": 17.34,
+          "scale": 0.816
+        },
+        {
+          "across": 22.25,
+          "distance": 17.1,
+          "scale": 0.968
+        }
+      ]
+    },
+    {
+      "id": "pine_1_2",
+      "name": "Pines, row 2 from the back",
+      "across": 0,
+      "distance": 17,
+      "height": 6.63,
+      "box": [
+        -1.99,
+        -6.9,
+        1.99,
+        0
+      ],
+      "copies": [
+        {
+          "across": -17.24,
+          "distance": 17.26,
+          "scale": 1.191,
+          "flip": true
+        },
+        {
+          "across": -2.48,
+          "distance": 17.03,
+          "scale": 1.259
+        },
+        {
+          "across": 1.24,
+          "distance": 17.16,
+          "scale": 1.205,
+          "flip": true
+        },
+        {
+          "across": 2.01,
+          "distance": 17.24,
+          "scale": 0.821,
+          "flip": true
+        },
+        {
+          "across": 9.22,
+          "distance": 17.27,
+          "scale": 1.005
+        },
+        {
+          "across": 10.53,
+          "distance": 17.3,
+          "scale": 0.745
+        },
+        {
+          "across": 17.4,
+          "distance": 17.1,
+          "scale": 1.119
+        },
+        {
+          "across": 18.99,
+          "distance": 17.06,
+          "scale": 0.787,
+          "flip": true
+        }
+      ]
+    },
+    {
+      "id": "pine_2_0",
+      "name": "Pines, row 3 from the back",
+      "across": 0,
+      "distance": 9.44,
+      "height": 4.91,
+      "box": [
+        -1.47,
+        -5.11,
+        1.47,
+        0
+      ],
+      "copies": [
+        {
+          "across": -9.31,
+          "distance": 9.45,
+          "scale": 0.732,
+          "flip": true
+        },
+        {
+          "across": -8.04,
+          "distance": 9.63,
+          "scale": 1.104,
+          "flip": true
+        },
+        {
+          "across": -3.69,
+          "distance": 9.67,
+          "scale": 0.731
+        },
+        {
+          "across": -2.24,
+          "distance": 9.54,
+          "scale": 1.03,
+          "flip": true
+        },
+        {
+          "across": -0.78,
+          "distance": 9.54,
+          "scale": 0.78,
+          "flip": true
+        },
+        {
+          "across": 1.94,
+          "distance": 9.54,
+          "scale": 0.947,
+          "flip": true
+        },
+        {
+          "across": 4.77,
+          "distance": 9.79,
+          "scale": 1.134
+        },
+        {
+          "across": 9.68,
+          "distance": 9.73,
+          "scale": 1.287,
+          "flip": true
+        },
+        {
+          "across": 10.99,
+          "distance": 9.83,
+          "scale": 1.294,
+          "flip": true
+        }
+      ]
+    },
+    {
+      "id": "pine_2_1",
+      "name": "Pines, row 3 from the back",
+      "across": 0,
+      "distance": 9.44,
+      "height": 4.91,
+      "box": [
+        -1.47,
+        -5.11,
+        1.47,
+        0
+      ],
+      "copies": [
+        {
+          "across": -10.8,
+          "distance": 9.69,
+          "scale": 1.173
+        },
+        {
+          "across": -7.06,
+          "distance": 9.65,
+          "scale": 1.037,
+          "flip": true
+        },
+        {
+          "across": -5.52,
+          "distance": 9.81,
+          "scale": 0.705
+        },
+        {
+          "across": -1.31,
+          "distance": 9.54,
+          "scale": 1.062
+        },
+        {
+          "across": 4.02,
+          "distance": 9.63,
+          "scale": 1.23
+        },
+        {
+          "across": 7.08,
+          "distance": 9.76,
+          "scale": 0.834,
+          "flip": true
+        },
+        {
+          "across": 7.82,
+          "distance": 9.65,
+          "scale": 1.057,
+          "flip": true
+        }
+      ]
+    },
+    {
+      "id": "pine_2_2",
+      "name": "Pines, row 3 from the back",
+      "across": 0,
+      "distance": 9.44,
+      "height": 4.91,
+      "box": [
+        -1.47,
+        -5.11,
+        1.47,
+        0
+      ],
+      "copies": [
+        {
+          "across": -12.65,
+          "distance": 9.49,
+          "scale": 0.737,
+          "flip": true
+        },
+        {
+          "across": -6.37,
+          "distance": 9.56,
+          "scale": 1.154
+        },
+        {
+          "across": -4.25,
+          "distance": 9.82,
+          "scale": 0.989
+        },
+        {
+          "across": 0.58,
+          "distance": 9.58,
+          "scale": 1.017,
+          "flip": true
+        },
+        {
+          "across": 2.86,
+          "distance": 9.72,
+          "scale": 0.935
+        },
+        {
+          "across": 5.93,
+          "distance": 9.84,
+          "scale": 1.041,
+          "flip": true
+        },
+        {
+          "across": 12.44,
+          "distance": 9.59,
+          "scale": 0.947,
+          "flip": true
+        }
+      ]
+    },
+    {
+      "id": "fog_0",
+      "name": "Fog at the foot of row 1",
+      "across": 0,
+      "distance": 21,
+      "height": 5.25,
+      "box": [
+        -35.7,
+        -5.25,
+        35.7,
+        0
+      ],
+      "inFront": [
+        "pine_0_0",
+        "pine_0_1",
+        "pine_0_2"
+      ],
+      "uniforms": {
+        "dist": 21,
+        "row": 0,
+        "base": 0.62,
+        "strength": 1.2,
+        "bgr": 0.1529,
+        "bgg": 0.2235,
+        "bgb": 0.2392
+      }
+    },
+    {
+      "id": "fog_1",
+      "name": "Fog at the foot of row 2",
+      "across": 0,
+      "distance": 10.6,
+      "height": 2.65,
+      "box": [
+        -18,
+        -2.65,
+        18,
+        0
+      ],
+      "inFront": [
+        "pine_1_0",
+        "pine_1_1",
+        "pine_1_2"
+      ],
+      "uniforms": {
+        "dist": 10.6,
+        "row": 1,
+        "base": 0.7,
+        "strength": 1,
+        "bgr": 0.0941,
+        "bgg": 0.1529,
+        "bgb": 0.1647
+      }
+    },
+    {
+      "id": "fog_2",
+      "name": "Fog at the foot of row 3",
+      "across": 0,
+      "distance": 6.9,
+      "height": 1.73,
+      "box": [
+        -11.7,
+        -1.72,
+        11.7,
+        0
+      ],
+      "inFront": [
+        "pine_2_0",
+        "pine_2_1",
+        "pine_2_2"
+      ],
+      "uniforms": {
+        "dist": 6.9,
+        "row": 2,
+        "base": 0.78,
+        "strength": 0.8,
+        "bgr": 0.0549,
+        "bgg": 0.0941,
+        "bgb": 0.102
+      }
+    },
+    {
+      "id": "bank",
+      "name": "The near bank",
+      "across": 0,
+      "distance": 6.3,
+      "height": 0.3,
+      "box": [
+        -14,
+        -0.3,
+        14,
+        0
+      ]
+    },
+    {
+      "id": "tree",
+      "name": "The big tree she leans by",
+      "across": 2.28,
+      "distance": 6.4,
+      "height": 8,
+      "box": [
+        -2.4,
+        -8,
+        0.8,
+        0
+      ]
+    },
+    {
+      "id": "girl",
+      "name": "The girl hugging her knees",
+      "x": 0.672,
+      "distance": 6.2,
+      "elevation": 0.1,
+      "height": 0.8,
+      "box": [
+        -0.6,
+        -1,
+        0.45,
+        0.03
+      ]
+    },
+    {
+      "id": "scarf",
+      "name": "Her scarf",
+      "on": "girl",
+      "distance": -0.03,
+      "height": 0.4,
+      "box": [
+        -0.05,
+        -0.62,
+        0.32,
+        -0.36
+      ]
+    },
+    {
+      "id": "grass_0",
+      "name": "Grass on the bank",
+      "across": 0,
+      "distance": 6.2,
+      "height": 0.35,
+      "box": [
+        -0.2,
+        -0.4,
+        0.2,
+        0
+      ],
+      "copies": [
+        {
+          "across": -8.41,
+          "distance": 6.42,
+          "scale": 1.374,
+          "flip": true
+        },
+        {
+          "across": -8,
+          "distance": 6.3,
+          "scale": 1.247
+        },
+        {
+          "across": -7.21,
+          "distance": 6.1,
+          "scale": 0.791,
+          "flip": true
+        },
+        {
+          "across": -6.4,
+          "distance": 6.21,
+          "scale": 0.947,
+          "flip": true
+        },
+        {
+          "across": -6,
+          "distance": 6.01,
+          "scale": 0.747,
+          "flip": true
+        },
+        {
+          "across": -3.49,
+          "distance": 6.36,
+          "scale": 0.767
+        },
+        {
+          "across": -2.28,
+          "distance": 6.06,
+          "scale": 1.331
+        },
+        {
+          "across": -2.09,
+          "distance": 6.45,
+          "scale": 1.305
+        },
+        {
+          "across": 1.15,
+          "distance": 6.44,
+          "scale": 1.15,
+          "flip": true
+        },
+        {
+          "across": 2.6,
+          "distance": 6.06,
+          "scale": 1.379,
+          "flip": true
+        },
+        {
+          "across": 4.57,
+          "distance": 6.2,
+          "scale": 1.316,
+          "flip": true
+        },
+        {
+          "across": 5.66,
+          "distance": 6.26,
+          "scale": 1.044
+        },
+        {
+          "across": 6.2,
+          "distance": 6.13,
+          "scale": 0.9
+        },
+        {
+          "across": 7.74,
+          "distance": 6.17,
+          "scale": 1.274,
+          "flip": true
+        },
+        {
+          "across": 8.48,
+          "distance": 6.46,
+          "scale": 0.769
+        }
+      ]
+    },
+    {
+      "id": "grass_1",
+      "name": "Grass on the bank",
+      "across": 0,
+      "distance": 6.2,
+      "height": 0.35,
+      "box": [
+        -0.2,
+        -0.4,
+        0.2,
+        0
+      ],
+      "copies": [
+        {
+          "across": -8.25,
+          "distance": 6.16,
+          "scale": 0.759
+        },
+        {
+          "across": -6.96,
+          "distance": 6.18,
+          "scale": 1.218
+        },
+        {
+          "across": -5.76,
+          "distance": 6.49,
+          "scale": 1.03,
+          "flip": true
+        },
+        {
+          "across": -5.2,
+          "distance": 6.14,
+          "scale": 1.191,
+          "flip": true
+        },
+        {
+          "across": -4.64,
+          "distance": 6.13,
+          "scale": 0.858,
+          "flip": true
+        },
+        {
+          "across": -4.2,
+          "distance": 6.02,
+          "scale": 1.124,
+          "flip": true
+        },
+        {
+          "across": -4.04,
+          "distance": 6.11,
+          "scale": 0.728,
+          "flip": true
+        },
+        {
+          "across": -3.85,
+          "distance": 6.34,
+          "scale": 0.799
+        },
+        {
+          "across": -3.19,
+          "distance": 6.45,
+          "scale": 1.279,
+          "flip": true
+        },
+        {
+          "across": -1.27,
+          "distance": 6.47,
+          "scale": 1.141,
+          "flip": true
+        },
+        {
+          "across": -0.63,
+          "distance": 6,
+          "scale": 0.825
+        },
+        {
+          "across": 0.25,
+          "distance": 6.36,
+          "scale": 1.198
+        },
+        {
+          "across": 1.38,
+          "distance": 6.32,
+          "scale": 1.008,
+          "flip": true
+        },
+        {
+          "across": 1.89,
+          "distance": 6.14,
+          "scale": 0.879,
+          "flip": true
+        },
+        {
+          "across": 4.86,
+          "distance": 6.09,
+          "scale": 0.8,
+          "flip": true
+        },
+        {
+          "across": 5.76,
+          "distance": 6.04,
+          "scale": 0.87
+        },
+        {
+          "across": 7.27,
+          "distance": 6.46,
+          "scale": 1.123
+        },
+        {
+          "across": 7.21,
+          "distance": 6,
+          "scale": 0.757
+        }
+      ]
+    },
+    {
+      "id": "grass_2",
+      "name": "Grass on the bank",
+      "across": 0,
+      "distance": 6.2,
+      "height": 0.35,
+      "box": [
+        -0.2,
+        -0.4,
+        0.2,
+        0
+      ],
+      "copies": [
+        {
+          "across": -7.75,
+          "distance": 6.4,
+          "scale": 0.911
+        },
+        {
+          "across": -5.67,
+          "distance": 6.01,
+          "scale": 0.772
+        },
+        {
+          "across": -3.39,
+          "distance": 6.49,
+          "scale": 1.23,
+          "flip": true
+        },
+        {
+          "across": -2.85,
+          "distance": 6.13,
+          "scale": 0.969
+        },
+        {
+          "across": -1.43,
+          "distance": 6.08,
+          "scale": 1.352
+        },
+        {
+          "across": -0.12,
+          "distance": 6.23,
+          "scale": 1.018,
+          "flip": true
+        },
+        {
+          "across": 0.41,
+          "distance": 6.21,
+          "scale": 1.049
+        },
+        {
+          "across": 1.76,
+          "distance": 6.32,
+          "scale": 0.932,
+          "flip": true
+        },
+        {
+          "across": 2.11,
+          "distance": 6.2,
+          "scale": 0.949,
+          "flip": true
+        },
+        {
+          "across": 3,
+          "distance": 6.16,
+          "scale": 0.713,
+          "flip": true
+        },
+        {
+          "across": 3.51,
+          "distance": 6.5,
+          "scale": 1.112,
+          "flip": true
+        },
+        {
+          "across": 4.11,
+          "distance": 6.17,
+          "scale": 1.388,
+          "flip": true
+        },
+        {
+          "across": 4.41,
+          "distance": 6.24,
+          "scale": 0.739
+        },
+        {
+          "across": 5.5,
+          "distance": 6.49,
+          "scale": 1.282,
+          "flip": true
+        },
+        {
+          "across": 7.13,
+          "distance": 6.15,
+          "scale": 0.769,
+          "flip": true
+        },
+        {
+          "across": 7.77,
+          "distance": 6.06,
+          "scale": 1.172
+        }
+      ]
+    },
+    {
+      "id": "grass_3",
+      "name": "Grass on the bank",
+      "across": 0,
+      "distance": 6.2,
+      "height": 0.35,
+      "box": [
+        -0.2,
+        -0.4,
+        0.2,
+        0
+      ],
+      "copies": [
+        {
+          "across": -6.58,
+          "distance": 6.05,
+          "scale": 0.857,
+          "flip": true
+        },
+        {
+          "across": -5.02,
+          "distance": 6.18,
+          "scale": 1.291
+        },
+        {
+          "across": -2.51,
+          "distance": 6.06,
+          "scale": 1.233,
+          "flip": true
+        },
+        {
+          "across": -1.74,
+          "distance": 6.26,
+          "scale": 1.349,
+          "flip": true
+        },
+        {
+          "across": -0.92,
+          "distance": 6.05,
+          "scale": 1.195,
+          "flip": true
+        },
+        {
+          "across": -0.32,
+          "distance": 6.17,
+          "scale": 1.038,
+          "flip": true
+        },
+        {
+          "across": 0.77,
+          "distance": 6.41,
+          "scale": 1.251,
+          "flip": true
+        },
+        {
+          "across": 1.55,
+          "distance": 6.26,
+          "scale": 0.984
+        },
+        {
+          "across": 2.5,
+          "distance": 6.46,
+          "scale": 1.186
+        },
+        {
+          "across": 3.61,
+          "distance": 6.22,
+          "scale": 0.925
+        },
+        {
+          "across": 3.79,
+          "distance": 6.24,
+          "scale": 1.261,
+          "flip": true
+        },
+        {
+          "across": 4.89,
+          "distance": 6.4,
+          "scale": 1.207,
+          "flip": true
+        },
+        {
+          "across": 6.54,
+          "distance": 6.17,
+          "scale": 0.972,
+          "flip": true
+        },
+        {
+          "across": 6.64,
+          "distance": 6.11,
+          "scale": 1.365,
+          "flip": true
+        }
+      ]
+    },
+    {
+      "id": "fireflies",
+      "name": "Fireflies",
+      "across": 0,
+      "distance": 7.2,
+      "height": 4,
+      "box": [
+        -7,
+        -4.4,
+        7,
+        0
+      ],
+      "glows": true,
+      "inFront": [
+        "girl",
+        "scarf",
+        "tree",
+        "bank",
+        "grass_0",
+        "grass_1",
+        "grass_2",
+        "grass_3"
+      ]
+    },
+    {
+      "id": "rain",
+      "name": "The rain that is always here",
+      "particles": {
+        "kind": "rain",
+        "count": 3000,
+        "opacity": 0.22,
+        "color": "#aac3c8",
+        "wind": 1
+      }
+    }
+  ]
+}
