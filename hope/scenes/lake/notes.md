@@ -9,7 +9,7 @@ end of a pier at night, a low moon, still water, fog, fireflies. Kept as close t
   length is the frame's height, so the pier's water line at screen y 0.818 is 7.14 m away and one stage height there
   is 7.14 m: the original's body unit `s` (0.14 of the height) is 1.0 m.
 - `sky` (stage heights): the original gradient, the moon at (0.3·aspect, 0.28), r 0.045, with its craters; its halo
-  is the moon's glow (`e.light`, point `sky#moon`) and its light scattered in a faint haze (`shafts`).
+  is the moon's glow (`e.light`, point `sky#moon`).
   Stars on layer 1; their colour carries each star's twinkle (red: phase, green: pace) and `sky.wgsl` shows them in
   #e2e5ff, twinkling as the original (0.3 + 0.7·(½ + ½ sin)²). The shader also draws the shooting star: first at 5 s,
   then one in each 16 s at its own moment, place and slant, 1.1 s long, the original's streak.
@@ -31,8 +31,8 @@ end of a pier at night, a low moon, still water, fog, fireflies. Kept as close t
 
 ## Light
 
-Night by the engine's light: ambient 0.5 of #c0c8ff, the moon (`from: sky#moon`), bounce 0 (stark silhouettes), a
-faint haze (0.02) for the moon's shafts. The paintings' colours are chosen so that, after that light, they come out at the original's night colours
+Night by the engine's light: ambient 0.5 of #c0c8ff, the moon (`from: sky#moon`), bounce 0 (stark silhouettes), no
+haze (the moon's shafts in a haze lit the whole sky grey; its halo is its glow). The paintings' colours are chosen so that, after that light, they come out at the original's night colours
 (ink #05060c for pier and girl, #1a1d34 / #0d0f1b for the ridges). Vignette 0.87 and grain 0.6 match the original's
 post (black 0.65 at the corners from 0.35·min to 0.6·diagonal; 6 % overlay grain).
 
