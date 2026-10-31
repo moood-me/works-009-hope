@@ -644,20 +644,6 @@
       ]
     },
     {
-      "id": "pine_1_0",
-      "name": "Pines, row 2 from the back",
-      "across": 0,
-      "distance": 17,
-      "height": 6.63,
-      "box": [
-        -1.99,
-        -6.9,
-        1.99,
-        0
-      ],
-      "copies": []
-    },
-    {
       "id": "pine_1_1",
       "name": "Pines, row 2 from the back",
       "across": 0,
@@ -1165,7 +1151,6 @@
         0
       ],
       "inFront": [
-        "pine_1_0",
         "pine_1_1",
         "pine_1_2",
         "pine_1_3",

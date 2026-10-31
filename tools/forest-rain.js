@@ -42,6 +42,10 @@ for (let i = 0; i < 3; i++) {
     kinds[Math.floor(rnd() * VARIANTS)].push(copy);
   }
   kinds.forEach((copies, v) => {
+    // (a kind no tree of the row fell to is not made)
+    if (!copies.length) {
+      return;
+    }
     const h = rowHeight(i);
     pines.push({
       id: 'pine_' + i + '_' + v,
