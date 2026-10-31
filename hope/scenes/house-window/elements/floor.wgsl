@@ -1,0 +1,60 @@
+// The design's floor (draw_house), drawn in the frame's terms — a point of this plane (its middle 3.9 m off, y toward
+// the eye; eye 1.7 m over it, horizon 0.5) is seen at (x / distance + the stage's middle, 0.5 + 1.7 / distance) — in
+// the screen's colours as the design's canvas laid them:
+// - its gradient from the wall's foot (0.72 of the frame) down: #0e0e13 to #060608;
+// - the window's cold light on it: a widening band from the window's width at the wall's foot to (from 0.35 window-
+//   widths left of it to 1.5 right) at the frame's foot, #7896be from 0.16 to 0.03;
+// - the cross's shadow in it: black at 0.25, from the upright bar's foot to 0.58 of the window and ft each side;
+// - the bulb's warm flash (#ffc482, 0.16 × the flicker at the bulb, none 0.7 × 16/9 off) — lib.js's flicker.
+const ASPECT = 1.7778;
+const WW = 0.42;
+const WX = 0.60778;
+const FY = 0.72;
+const FT = 0.0147;
+const F0 = vec3f(0.055, 0.055, 0.075);
+const F1 = vec3f(0.024, 0.024, 0.031);
+const COLD = vec3f(0.471, 0.588, 0.745);
+const WARM = vec3f(1.0, 0.769, 0.51);
+
+fn toScreen(c: vec3f) -> vec3f {
+  let k = max(c, vec3f(0.0));
+  return select(1.055 * pow(k, vec3f(1.0 / 2.4)) - 0.055, k * 12.92, k <= vec3f(0.0031308));
+}
+fn pcg(n: u32) -> f32 {
+  let s = n * 747796405u + 2891336453u;
+  var w = ((s >> ((s >> 28u) + 4u)) ^ s) * 277803737u;
+  w = (w >> 22u) ^ w;
+  return f32(w) / 4294967296.0;
+}
+fn flicker(t: f32) -> f32 {
+  let k = i32(floor(t / 11.0));
+  var b = 0.0;
+  for (var j = k - 1; j <= k; j++) {
+    if (j >= 0) {
+      let ju = u32(j);
+      let at = f32(j) * 11.0 + 2.0 + pcg(ju * 3u + 1u) * 6.6;
+      let s = 0.5 + 0.5 * pcg(ju * 3u + 2u);
+      b = select(b, max(b, s - 2.2 * (t - at)), t >= at);
+    }
+  }
+  let stutter = select(1.0, 0.25, pcg(u32(floor(t * 30.0)) + 100000u) < 0.3);
+  return max(b, 0.0) * stutter;
+}
+fn bulb() -> vec2f { return vec2f(0.8 * ASPECT + sin(cycle(0.5 / 6.2832) * 6.2832) * 0.006, 0.27); }
+
+fn shade(painted: vec4f, at: vec2f, uv: vec2f) -> vec4f {
+  let dist = max(3.9 - at.y, 0.05);
+  let p = vec2f(at.x / dist + ASPECT * 0.5, 0.5 + 1.7 / dist);
+  let s = clamp((p.y - FY) / (1.0 - FY), 0.0, 1.0);
+  var screen = mix(F0, F1, s);
+  let left = mix(WX, WX - 0.35 * WW, s);
+  let right = mix(WX + WW, WX + 1.5 * WW, s);
+  let lit = select(0.0, 1.0, p.x > left && p.x < right && p.y >= FY);
+  screen = mix(screen, COLD, mix(0.16, 0.03, s) * lit);
+  let c0 = mix(WX + WW * 0.5, WX + WW * 0.58, s);
+  let hw = mix(FT * 0.5, FT, s);
+  screen = mix(screen, vec3f(0.0), select(0.0, 0.25, abs(p.x - c0) < hw && p.y >= FY) * lit);
+  let r = length(p - bulb()) / (0.7 * ASPECT);
+  screen = mix(screen, WARM, 0.16 * flicker(u_time) * clamp(1.0 - r, 0.0, 1.0));
+  return vec4f(srgbToLinear(screen), 1.0);
+}
