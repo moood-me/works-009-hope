@@ -1,0 +1,5 @@
+{"strings": [
+  {"text":"Hope","translation":"Надежда","where":"scenes/home/scene.json title"},
+  {"text":"HOPE","translation":"HOPE","where":"scenes/home/widgets/name.html"},
+  {"text":"in development. there is hope.","translation":"в разработке. надежда есть.","where":"scenes/home/widgets/name.html"}
+]}

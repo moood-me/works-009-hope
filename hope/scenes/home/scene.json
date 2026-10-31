@@ -1,0 +1,13 @@
+{
+  "engine": 3,
+  "title": "Hope",
+  "horizon": 0.5,
+  "camera": { "mode": "picture" },
+  "light": { "vignette": 0, "grain": 0 },
+  "widgets": [
+    { "id": "name", "name": "HOPE and its line", "x": 0.5, "y": 0.5, "anchor": "center", "width": 900, "height": 160 }
+  ],
+  "objects": [
+    { "id": "sky", "name": "The page's quiet dark", "sky": true, "box": [-0.7, -0.6, 2.48, 1.3] }
+  ]
+}
