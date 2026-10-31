@@ -9,13 +9,23 @@ const dist = i => EYE / (base(i) - HORIZON);
 const rowHeight = i => (0.26 + 0.13 * i) * dist(i);
 const rowOf = id => Number(id.split('_')[1]);
 
-// a pine kind of its row (id pine_<row>_<variant>): the design's tree at the row's nominal height, swaying in the
-// wind from its foot (its whole painting a layer bending about the foot: the top sways most)
+// the design's sway of a pine: its tiers shifted sin(0.5 t + phase) · 0.012 · (row + 1) of its height at the top, less
+// the lower — a turn about its foot of that over its 0.94 height. The design took the phase from the tree's place; here
+// each kind has its own (six kinds a row, their copies mixed along it).
+function pineSway(e) {
+  const i = rowOf(e.id);
+  const v = Number(e.id.split('_')[2]);
+  const ph = v * 2.3 + i * 0.9;
+  e.layer('tree').rotate = -Math.sin(e.t * 0.5 + ph) * 0.012 * (i + 1) / 0.94;
+}
+
+// a pine kind of its row (id pine_<row>_<variant>): the design's tree at the row's nominal height, its whole painting a
+// layer turning about its foot (pineSway)
 function pineKind(g, e) {
   const i = rowOf(e.id);
   const h = rowHeight(i);
   const w = h * (0.26 + e.rnd() * 0.1);
-  e.layer('tree', { pivot: [0, 0], wind: { strength: 0.12 + 0.08 * i, gust: 0.3 } }, c => {
+  e.layer('tree', { pivot: [0, 0] }, c => {
     c.fillStyle = COLOURS[i];
     c.fillRect(-w * 0.035, -h * 0.25, w * 0.07, h * 0.25);
     c.beginPath();
