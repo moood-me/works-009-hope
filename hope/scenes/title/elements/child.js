@@ -31,6 +31,6 @@ g.fill();
 limb(0.06, -0.75, 0.2, -0.5, 0.06);
 
 e.light(0.2 * S, -0.45 * S, 2.3, '#ffc88c', 0.15, 'halo', 'linear');
-e.light(0.2 * S, -0.42 * S, 0.26, '#ffe1b4', 0.9, 'core', 'linear');
+e.light(0.2 * S, -0.42 * S, 0.4, '#ffe1b4', 1.1, 'core', 'linear');
 e.at(0, -0.93 * S);
 e.at(0.2 * S, -0.45 * S, 'light');
