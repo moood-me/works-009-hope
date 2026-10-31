@@ -40,20 +40,6 @@
       ]
     },
     {
-      "id": "fog_far",
-      "name": "Fog drifting behind the hill",
-      "across": 0,
-      "distance": 21,
-      "elevation": 0,
-      "height": 9,
-      "box": [
-        -36,
-        -9,
-        36,
-        0
-      ]
-    },
-    {
       "id": "ground",
       "name": "The dark ground before the hill",
       "plane": true,
@@ -97,11 +83,11 @@
       "across": 0,
       "distance": 7,
       "elevation": 0,
-      "height": 2.4,
+      "height": 2.2,
       "box": [
-        -16,
-        -2.4,
-        16,
+        -10.5,
+        -2.2,
+        10.5,
         0
       ]
     },
@@ -110,18 +96,30 @@
       "name": "A few flakes of snow",
       "particles": {
         "kind": "snow",
-        "count": 1500,
+        "count": 2500,
         "size": [
-          0.012,
-          0.012
+          0.02,
+          0.02
         ],
         "speed": [
           0.15,
           0.4
         ],
-        "opacity": 0.5,
+        "opacity": 0.6,
         "color": "#dce1eb"
       }
+    }
+  ],
+  "lights": [
+    {
+      "id": "halo",
+      "of": "child#halo",
+      "reach": 0.01
+    },
+    {
+      "id": "core",
+      "of": "child#core",
+      "reach": 0.01
     }
   ]
 }

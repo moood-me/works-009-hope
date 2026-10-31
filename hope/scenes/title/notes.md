@@ -8,15 +8,19 @@ snow, and the name «hope» over it all.
 
 - Horizon 0.7, eye 1.7 m, camera `picture` (it leans toward the pointer, as the design's hill and child shifted with
   the mouse — here with true parallax).
-- `sky`: the design's gradient over the whole frame (its palest band at 0.62); the pale aura in the middle,
-  breathing 0.06 ± 0.02, is its shader (painted, so faint a gradient showed its steps).
+- `sky`: the design's gradient over the whole frame (its palest band at 0.62). Its shader lays over it, in the
+  screen's colours as the design's canvas did, the pale aura breathing 0.06 ± 0.02 and the far fog (the design's
+  f1: six soft ellipses drifting round 0.6 of the frame). Painted, gradients this faint showed their steps; laid
+  in linear light, faint fog came out far lighter than the design's.
 - `hill` at 19 m: the design's quadratic crest (0.79 → 0.7275 → 0.8 of the frame) in metres, on `ground` (a plane
   of the same colour from our feet to the hill): together the design's one dark silhouette.
 - `child` on the crest (1.1 m tall, the design's 0.055 of the frame at 19 m): the design's `stand` pose, a girl.
   Two glows at her hand — a wide faint halo and a bright core — breathing 0.75 + 0.25 sin 1.4t (+ 0.05 sin 9t).
-- `fog_far` (21 m, just behind the hill) and `fog_near` (7 m, before it): the design's fog blobs, each a layer
-  drifting at its own pace. Whatever is under the ground is not seen, so each stands where its lower edge meets
-  the ground low enough in the frame (behind the hill's sides; near the frame's foot).
+  They light nothing (lights `halo`, `core`: reach 0.01): in the design they are glows only, and as lights they
+  lit the hill and the ground round her in a wide warm patch.
+- `fog_near` at 7 m: the design's f2 — five soft ellipses round 0.78 of the frame before the hill — drawn by its
+  shader in the frame's terms, its strength turned into linear light's that gives the design's colour over the
+  dark ground.
 - `snow`: a few small flakes falling slowly.
 - Widget `name`: «hope» in Cormorant light italic with its pale glow, and «надежда» under it in IBM Plex Mono — the
   design's own two words (the Russian word is part of the design, the same in every language).
