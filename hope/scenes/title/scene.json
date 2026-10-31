@@ -92,22 +92,9 @@
       ]
     },
     {
-      "id": "snow",
-      "name": "A few flakes of snow",
-      "particles": {
-        "kind": "snow",
-        "count": 2500,
-        "size": [
-          0.02,
-          0.02
-        ],
-        "speed": [
-          0.15,
-          0.4
-        ],
-        "opacity": 0.6,
-        "color": "#dce1eb"
-      }
+      "id": "snowfall",
+      "name": "The snow over the frame",
+      "insert": "snowfall"
     }
   ],
   "lights": [
@@ -121,5 +108,17 @@
       "of": "child#core",
       "reach": 0.01
     }
-  ]
+  ],
+  "state": {
+    "snowfall": 1
+  },
+  "states": {
+    "snowfall": {
+      "range": [
+        0,
+        1
+      ],
+      "means": "1 — the snow falls over the frame (the design's); 0 — none"
+    }
+  }
 }

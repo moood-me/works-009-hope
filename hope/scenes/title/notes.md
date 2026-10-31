@@ -21,8 +21,10 @@ snow, and the name «hope» over it all.
 - `fog_near` at 7 m: the design's f2 — five soft ellipses round 0.78 of the frame before the hill — drawn by its
   shader in the frame's terms, its strength turned into linear light's that gives the design's colour over the
   dark ground.
-- `snow`: a few small flakes falling slowly.
-- Widget `name`: «hope» in Cormorant light italic with its pale glow, and «надежда» under it in IBM Plex Mono — the
+- `snowfall`: the design's snow — 140 small solid flakes falling 8–30 px a second and swaying — drawn by the
+  insert's shader over the whole frame, fixed to it, over everything, as the design drew it (key `snowfall`: 1).
+- Widget `name`: «hope» in Cormorant light italic with its pale glow, and «надежда» under it in IBM Plex Mono (the faces
+  carried inside the widget, made by tools/title-name.js: the page takes fonts only from itself) — the
   design's own two words (the Russian word is part of the design, the same in every language).
 
 ## Not here
