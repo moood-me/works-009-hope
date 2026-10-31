@@ -11,7 +11,9 @@ g.fillStyle = R.colour;
 for (const b of R.blocks) {
   g.fillRect(X(b.x), Y(b.top), b.w * D, -Y(b.top));
 }
-for (const w of R.lit) {
+// (windows under the street's level are under the sill anyway: not painted)
+const shown = w => Y(w.y) + w.h * D <= 0;
+for (const w of R.lit.filter(shown)) {
   g.fillStyle = w.colour;
   g.fillRect(X(w.x), Y(w.y), w.w * D, w.h * D);
 }

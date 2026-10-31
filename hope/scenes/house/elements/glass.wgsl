@@ -9,7 +9,7 @@
 //   0.22, 0.6 of the drop wide); each drop a faint shadow, a pale body and a speck of light;
 // - her breath fogging the glass by her face (#c8d2eb, 0.12 + 0.06 sin 1.1t, 0.28 of her size round).
 // The painted drops come first. All laid over the night seen through the pane (#181e31): what that gives is what
-// this pane lays over what is behind it (its darkening as alpha, the rest as light).
+// this pane lays over what is behind it: its darkening as alpha, the rest as light added (emission).
 const ASPECT = 1.7778;
 const D = 3.29;
 const WW = 0.64;
@@ -100,6 +100,6 @@ fn shade(painted: vec4f, at: vec2f, uv: vec2f) -> vec4f {
   screen = mix(screen, FOG, (0.12 + 0.06 * wave(1.1, 0.0)) * clamp(1.0 - fog, 0.0, 1.0));
   let inside = select(0.0, 1.0, w.x > 0.0 && w.x < WW && w.y > 0.0 && w.y < WH);
   let a = (1.0 - keep) * inside;
-  let lit = max(srgbToLinear(screen) - bg * (1.0 - a), vec3f(0.0)) * inside;
-  return vec4f(lit, a);
+  emission = max(srgbToLinear(screen) - bg * (1.0 - a), vec3f(0.0)) * inside;
+  return vec4f(0.0, 0.0, 0.0, a);
 }

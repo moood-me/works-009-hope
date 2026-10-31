@@ -52,7 +52,9 @@ function city() {
       const ch = WH * 0.016;
       const gx = WW * 0.012;
       const gy = WH * 0.022;
-      for (let wy = bt + gy; wy < WH - ch; wy += ch + gy) {
+      // (the far row stands 90 m off: below 0.58 of the window it is under the street's level, under the sill)
+      const foot = row ? WH : 0.58;
+      for (let wy = bt + gy; wy < foot - ch; wy += ch + gy) {
         for (let wx = x + gx; wx < x + bw - cw - gx; wx += cw + gx) {
           const w = { x: wx, y: wy, w: cw, h: ch, p: rnd() * 100 };
           if (rnd() < 0.12) {
