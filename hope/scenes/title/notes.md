@@ -32,3 +32,7 @@ snow, and the name «hope» over it all.
 The design's page is also an interface — «нажми на hope», the list of its three scenes, a fade from black as it
 opens. Those are the game's and the page's, not the scene's. Its grain is a normal-blended noise (it shows in the
 blacks); the engine's grain is an overlay, which hardly shows in so dark a picture.
+
+Post, the design's: grain as a normal-blended noise (light.grainBlend "normal", grain 0.86 — 22/255), the vignette's
+shape (0.25 of the short side to 0.78 of the long, centre 0.49, black at 0.72); its glows fall off linearly, as its
+canvas gradients did ('linear'). These are engine 3's newer words (moood-me/moood@engine3-hope-all until merged).

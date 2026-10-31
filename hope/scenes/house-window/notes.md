@@ -29,3 +29,7 @@ light.
 
 The design's words and «нажми — лампочка вспыхнет» (a click making it flash): the game's — the flicker is the
 scene's own. Its grain and vignette: see the title scene's notes and the engine requests.
+
+Post, the design's: grain as a normal-blended noise (light.grainBlend "normal", grain 0.86 — 22/255), the vignette's
+shape (0.25 of the short side to 0.78 of the long, centre 0.49, black at 0.72); its glows fall off linearly, as its
+canvas gradients did ('linear'). These are engine 3's newer words (moood-me/moood@engine3-hope-all until merged).

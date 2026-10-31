@@ -30,7 +30,7 @@ g.ellipse(-0.03 * S, -0.84 * S, 0.08 * S, 0.13 * S, 0, 0, Math.PI * 2);
 g.fill();
 limb(0.06, -0.75, 0.2, -0.5, 0.06);
 
-e.light(0.2 * S, -0.45 * S, 3, '#ffc88c', 0.35, 'halo');
-e.light(0.2 * S, -0.42 * S, 0.65, '#ffe1b4', 0.8, 'core');
+e.light(0.2 * S, -0.45 * S, 2.3, '#ffc88c', 0.15, 'halo', 'linear');
+e.light(0.2 * S, -0.42 * S, 0.4, '#ffe1b4', 1.1, 'core', 'linear');
 e.at(0, -0.93 * S);
 e.at(0.2 * S, -0.45 * S, 'light');

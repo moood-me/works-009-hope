@@ -40,3 +40,6 @@ post (black 0.65 at the corners from 0.35·min to 0.6·diagonal; 6 % overlay gra
 
 No state, no showcase: the original scene has no events — only its ambient life, which runs by itself. The faint
 light line the original drew exactly at the horizon (2 px, 10 %) is left to the mirror's own edge.
+
+With the engine's newer words (moood-me/moood@engine3-hope-all until merged): the ripple's pace 0.2 (the original's water
+hardly moves), a sharper mirror, and the moon's halo as its glow falling off linearly.

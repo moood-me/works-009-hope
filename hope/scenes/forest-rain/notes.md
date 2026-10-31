@@ -34,3 +34,7 @@ from the repository's root; the fog's shader text is `tools/forest-rain-fog.wgsl
 The design's page also had its words (the lines, «веди светлячков за собой») and the fireflies following the pointer
 and scattering on a click: the words are the game's; the pointer is not the scene's to read. Its grain and vignette
 are the design's own (see the title scene's notes and the engine requests).
+
+Post, the design's: grain as a normal-blended noise (light.grainBlend "normal", grain 0.86 — 22/255), the vignette's
+shape (0.25 of the short side to 0.78 of the long, centre 0.49, black at 0.72); its glows fall off linearly, as its
+canvas gradients did ('linear'). These are engine 3's newer words (moood-me/moood@engine3-hope-all until merged).

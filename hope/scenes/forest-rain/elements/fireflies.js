@@ -16,6 +16,6 @@ for (let f = 0; f < 16; f++) {
     c.beginPath();
     c.arc(x, y, 0.012, 0, Math.PI * 2);
     c.fill();
-    e.light(x, y, 0.3, '#ffcd78', 0.75, 'f' + f);
+    e.light(x, y, 0.2, '#ffcd78', 0.5, 'f' + f, 'linear');
   });
 }
