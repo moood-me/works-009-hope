@@ -88,8 +88,8 @@ const scene = {
   horizon: HORIZON,
   camera: { mode: 'picture' },
   light: { bounce: 0, haze: 0, vignette: 0.87, grain: 0.6, wind: [1, 0, 0.2] },
-  state: { breath: 0 },
-  states: { breath: { type: 'number', means: 'counts his breaths: each one up lets out a puff in the cold (the script breathes)' } },
+  state: { breath: 0, snowfall: 1 },
+  states: { breath: { type: 'number', means: 'counts his breaths: each one up lets out a puff in the cold (the script breathes)' }, snowfall: { range: [0, 1], means: '1 — the snow falls over the frame (as the original); 0 — none' } },
   captions: [
     { text: 'The snow has covered every path back.', at: 3 },
     { text: 'But somewhere between the trees, a light is on.', at: 11 },
@@ -141,7 +141,7 @@ const scene = {
         soft: 0.05,
       },
     },
-    { id: 'snow', name: 'Falling snow', particles: { kind: 'snow', count: 14000, size: [0.03, 0.03], speed: [0.25, 0.45] } },
+    { id: 'snowfall', name: 'The snow over the frame', insert: 'snowfall', uniforms: { blow: 0 } },
   ],
 };
 

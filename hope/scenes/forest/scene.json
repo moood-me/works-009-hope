@@ -17,12 +17,20 @@
     ]
   },
   "state": {
-    "breath": 0
+    "breath": 0,
+    "snowfall": 1
   },
   "states": {
     "breath": {
       "type": "number",
       "means": "counts his breaths: each one up lets out a puff in the cold (the script breathes)"
+    },
+    "snowfall": {
+      "range": [
+        0,
+        1
+      ],
+      "means": "1 — the snow falls over the frame (as the original); 0 — none"
     }
   },
   "captions": [
@@ -1946,19 +1954,11 @@
       }
     },
     {
-      "id": "snow",
-      "name": "Falling snow",
-      "particles": {
-        "kind": "snow",
-        "count": 14000,
-        "size": [
-          0.03,
-          0.03
-        ],
-        "speed": [
-          0.25,
-          0.45
-        ]
+      "id": "snowfall",
+      "name": "The snow over the frame",
+      "insert": "snowfall",
+      "uniforms": {
+        "blow": 0
       }
     }
   ]

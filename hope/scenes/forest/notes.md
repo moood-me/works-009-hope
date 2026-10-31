@@ -26,8 +26,9 @@ after changing the layout); `lib.js` paints them with the same numbers.
   3.75 s), rising and drifting with the wind.
 - `cabin` at 35 m (row 1), in the fog's grey, before its row's trees; `cabin_light` its window and warm glow,
   flickering, before the row's mist too (the original drew the light after the mist).
-- `snow`: the engine's snowfall round the eye, falling slowly as the original's (0.25–0.45 m/s), carried by a
-  light wind (light.wind 0.2 with its gusts).
+- `snowfall`: the original's snow, drawn by an insert's shader over the whole frame, fixed to it, over everything as
+  the canvas drew it: about 460 soft flakes at depths 0…1, each falling, drifting with the slow uneven wind (its sum
+  from animate) and swaying as the original's, sized and faded by its depth.
 - `script.js`: the view sways side to side (camera_x ±0.6 m, about 90 s a cycle) as the original's camera drifted,
   so the rows pass one another in parallax.
 
