@@ -1,0 +1,5 @@
+{"strings": [
+  {"text":"The Lake","translation":"Озеро","where":"scenes/lake/scene.json title"},
+  {"text":"Some nights the water is the only one who listens.","translation":"Бывают ночи, когда слушает только вода.","where":"scenes/lake/scene.json captions[0] text"},
+  {"text":"But one firefly stays.","translation":"Но один светлячок остаётся.","where":"scenes/lake/scene.json captions[1] text"}
+]}
