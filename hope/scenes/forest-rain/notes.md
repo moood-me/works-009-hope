@@ -26,7 +26,8 @@ from the repository's root; the fog's shader text is `tools/forest-rain-fog.wgsl
 - `fireflies`: sixteen, each a layer wandering by smooth noise and blinking as the design's, their glows lighting
   nothing (lights `fly0…15`), drawn over her and the bank as the design drew them last. The first goes to her knee
   as `rest` comes to 1 (the script: after 8 s, over 5 s).
-- `rain`: the engine's rain, thin and pale, slanting in the wind.
+- `rainfall`: the design's rain — 312 thin pale streaks leaning 0.14, falling 0.9–1.5 of the frame a second — drawn
+  by an insert's shader over the whole frame, fixed to it, over everything, as the design drew it (key `rainfall`).
 
 ## Not here
 

@@ -104,7 +104,8 @@
     }
   ],
   "state": {
-    "rest": 0
+    "rest": 0,
+    "rainfall": 1
   },
   "states": {
     "rest": {
@@ -114,6 +115,13 @@
       ],
       "smooth": true,
       "means": "0 — the fireflies all wander; 1 — one of them has settled on her knee (the script brings it when all is still)"
+    },
+    "rainfall": {
+      "range": [
+        0,
+        1
+      ],
+      "means": "1 — the rain falls over the frame (as the design); 0 — none"
     }
   },
   "objects": [
@@ -1551,15 +1559,9 @@
       ]
     },
     {
-      "id": "rain",
+      "id": "rainfall",
       "name": "The rain that is always here",
-      "particles": {
-        "kind": "rain",
-        "count": 3000,
-        "opacity": 0.22,
-        "color": "#aac3c8",
-        "wind": 1
-      }
+      "insert": "rainfall"
     }
   ]
 }

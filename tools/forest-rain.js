@@ -99,8 +99,8 @@ const scene = {
   camera: { mode: 'picture' },
   light: { bounce: 0, haze: 0, vignette: 0.96, grain: 0.8, wind: [1, 0, 0.6] },
   lights: glowsOnly,
-  state: { rest: 0 },
-  states: { rest: { range: [0, 1], smooth: true, means: '0 — the fireflies all wander; 1 — one of them has settled on her knee (the script brings it when all is still)' } },
+  state: { rest: 0, rainfall: 1 },
+  states: { rest: { range: [0, 1], smooth: true, means: '0 — the fireflies all wander; 1 — one of them has settled on her knee (the script brings it when all is still)' }, rainfall: { range: [0, 1], means: '1 — the rain falls over the frame (as the design); 0 — none' } },
   objects: [
     { id: 'sky', name: 'The night over the forest, a hazy moon', sky: true, box: [-0.7, -0.6, 2.48, 1.3] },
     { id: 'ground', name: 'The forest floor', plane: true, across: 0, distance: 42.5, elevation: 0, width: 200, depth: 85 },
@@ -112,7 +112,7 @@ const scene = {
     { id: 'scarf', name: 'Her scarf', on: 'girl', distance: -0.03, height: 0.4, box: [-0.05, -0.62, 0.32, -0.36] },
     ...tufts,
     { id: 'fireflies', name: 'Fireflies', across: 0, distance: 7.2, height: 4, box: [-7, -4.4, 7, 0], glows: true, inFront: ['girl', 'scarf', 'tree', 'bank', ...tufts.map(t => t.id)] },
-    { id: 'rain', name: 'The rain that is always here', particles: { kind: 'rain', count: 3000, opacity: 0.22, color: '#aac3c8', wind: 1 } },
+    { id: 'rainfall', name: 'The rain that is always here', insert: 'rainfall' },
   ],
 };
 
