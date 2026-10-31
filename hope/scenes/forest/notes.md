@@ -22,7 +22,8 @@ after changing the layout); `lib.js` paints them with the same numbers.
   and `head` (hat, pompom and the scarf round the neck, lifted with each breath). `scarf`: the knot painted, the
   two flying ends drawn by `scarf.wgsl` — the original's strips with a wave running to their free ends, reaching out
   and up as the wind (a slow noise, 0..1) rises; the wave's phase is added up in animate.
-- `breath`: a puff of smoke particles every 3–4.5 s by his head, rising and drifting with the wind.
+- `breath`: a puff of smoke particles by his head each time the key `breath` goes up (the script breathes every
+  3.75 s), rising and drifting with the wind.
 - `cabin` at 35 m (row 1), in the fog's grey, before its row's trees; `cabin_light` its window and warm glow,
   flickering, before the row's mist too (the original drew the light after the mist).
 - `snow`: the engine's snowfall round the eye, falling slowly as the original's (0.25–0.45 m/s), carried by a

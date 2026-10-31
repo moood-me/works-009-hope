@@ -14,3 +14,8 @@ scene.after(first, () => {
   go();
   scene.every(PERIOD / 2, go);
 });
+
+// He breathes out in the cold every 3.75 s (the original: every 3 to 4.5 s): each breath a puff (breath).
+scene.every(3.75, () => {
+  scene.set('breath', (scene.get('breath') || 0) + 1);
+});

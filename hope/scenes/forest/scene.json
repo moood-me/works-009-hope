@@ -16,6 +16,15 @@
       0.2
     ]
   },
+  "state": {
+    "breath": 0
+  },
+  "states": {
+    "breath": {
+      "type": "number",
+      "means": "counts his breaths: each one up lets out a puff in the cold (the script breathes)"
+    }
+  },
   "captions": [
     {
       "text": "The snow has covered every path back.",
@@ -1908,6 +1917,7 @@
         },
         "rate": 0,
         "burst": {
+          "on": "breath",
           "count": 1
         },
         "life": [
@@ -1919,7 +1929,7 @@
           0.37
         ],
         "color": "#e1e6f0",
-        "opacity": 0.22,
+        "opacity": 0.3,
         "gravity": -0.05,
         "direction": [
           0.3,
