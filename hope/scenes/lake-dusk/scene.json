@@ -1,0 +1,131 @@
+{
+  "engine": 3,
+  "title": "The Quiet Lake",
+  "horizon": 0.56,
+  "camera": {
+    "mode": "picture"
+  },
+  "light": {
+    "bounce": 0,
+    "haze": 0,
+    "vignette": 0.96,
+    "grain": 0.8
+  },
+  "objects": [
+    {
+      "id": "sky",
+      "name": "The dusk sky and the low sun",
+      "sky": true,
+      "box": [
+        -0.7,
+        -0.6,
+        2.48,
+        1.3
+      ]
+    },
+    {
+      "id": "shore",
+      "name": "The far shore's trees",
+      "across": 0,
+      "distance": 2000,
+      "height": 90,
+      "box": [
+        -3600,
+        -90,
+        3600,
+        0
+      ]
+    },
+    {
+      "id": "lake",
+      "name": "The still lake",
+      "plane": true,
+      "across": 0,
+      "distance": 2000,
+      "elevation": 0,
+      "width": 12000,
+      "depth": 4000,
+      "water": true,
+      "reflect": {
+        "strength": 0.3,
+        "fade": 0,
+        "rough": 0,
+        "ripple": 0
+      },
+      "uniforms": {
+        "mirror": 0
+      }
+    },
+    {
+      "id": "mist",
+      "name": "Mist on the far water",
+      "across": 0,
+      "distance": 30,
+      "height": 3,
+      "box": [
+        -45,
+        -3,
+        45,
+        0
+      ]
+    },
+    {
+      "id": "pier",
+      "name": "The pier",
+      "across": 0,
+      "distance": 9.71,
+      "height": 0.6,
+      "box": [
+        -25,
+        -0.6,
+        0.1,
+        0.02
+      ]
+    },
+    {
+      "id": "girl",
+      "name": "The girl at the pier's end",
+      "on": "pier",
+      "across": -0.163,
+      "distance": -0.05,
+      "elevation": 0.035,
+      "height": 1.2,
+      "box": [
+        -0.3,
+        -1.65,
+        0.75,
+        0.03
+      ]
+    },
+    {
+      "id": "scarf",
+      "name": "Her scarf",
+      "on": "girl",
+      "distance": -0.03,
+      "height": 0.4,
+      "box": [
+        -0.35,
+        -1.35,
+        0.2,
+        -1.0
+      ]
+    },
+    {
+      "id": "rings",
+      "name": "Rings where her foot touches the water",
+      "plane": true,
+      "on": "pier",
+      "across": 0.29,
+      "distance": -0.05,
+      "elevation": 0.002,
+      "width": 5,
+      "depth": 5,
+      "uniforms": {
+        "drop0": -100,
+        "x0": 0,
+        "drop1": -100,
+        "x1": 0
+      }
+    }
+  ]
+}
