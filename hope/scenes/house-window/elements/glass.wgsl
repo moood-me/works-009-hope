@@ -5,8 +5,8 @@
 // s) and slips down its own step (0.03–0.1 of the window) in half a second. Over all that is seen through the pane, the
 // bulb's flash (lib.js's flicker), as the design laid it over the window. In the frame's terms: this card stands 7.71 m
 // off on the floor (eye 1.7 m, horizon 0.5): (at.x / 7.71 + the stage's middle, 0.5 + (1.7 + at.y) / 7.71). Laid in the
-// screen's colours over the night through the pane (#2a3848): what that adds there is added as light (the drops and
-// the flash lighten what is behind the pane; they hide nothing).
+// screen's colours over the night through the pane (#2a3848): what that adds there is added as light (emission: the
+// drops and the flash lighten what is behind the pane; they hide nothing).
 const ASPECT = 1.7778;
 const D = 7.71;
 const WW = 0.42;
@@ -80,5 +80,6 @@ fn shade(painted: vec4f, at: vec2f, uv: vec2f) -> vec4f {
   let bg = srgbToLinear(BACK);
   let lin = srgbToLinear(screen) - bg;
   let a = select(0.0, 1.0, inside);
-  return vec4f(max(lin, vec3f(0.0)) * a, 0.0);
+  emission = max(lin, vec3f(0.0)) * a;
+  return vec4f(0.0);
 }
