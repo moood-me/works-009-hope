@@ -1,0 +1,43 @@
+<style>
+  :host { display: block; }
+  .name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none;
+  }
+  .hope {
+    font-family: 'Cormorant', Georgia, serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 220px;
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    color: #e6e1d7;
+    text-shadow: 0 0 50px rgba(190, 205, 225, 0.22);
+    padding: 0 0.12em;
+  }
+  .sub {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.7em;
+    padding-left: 0.7em;
+    color: #8a919b;
+  }
+</style>
+<div class="name">
+  <div class="hope">hope</div>
+  <div class="sub">надежда</div>
+</div>
+<script>
+  // The design's two faces: Cormorant (light italic) and IBM Plex Mono. A face declared inside a shadow root is
+  // not used by the browser, so it is declared once on the page.
+  if (!document.getElementById('hope-fonts')) {
+    const link = document.createElement('link');
+    link.id = 'hope-fonts';
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=IBM+Plex+Mono:wght@300;400&display=swap';
+    document.head.appendChild(link);
+  }
+</script>
