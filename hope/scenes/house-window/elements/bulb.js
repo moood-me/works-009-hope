@@ -28,6 +28,6 @@ e.layer('lit', { pivot: [0, TOP] }, c => {
   c.beginPath();
   c.arc(0, 0, 8 * PX, 0, Math.PI * 2);
   c.fill();
-  e.light(0, 0, 60 * PX, '#ffdca0', 0.5, 'glow');
+  e.light(0, 0, 60 * PX, '#ffdca0', 0.6, 'glow', 'linear');
 });
 e.at(0, 0, 'bulb');

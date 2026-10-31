@@ -22,7 +22,7 @@ const oval = (c, x, y, rx, ry, rot) => {
   c.fill();
 };
 
-e.light(-0.15 * S, -0.4 * S, 1.8 * S, '#8caaaa', 0.35, 'aura');
+e.light(-0.15 * S, -0.4 * S, 1.8 * S, '#8caaaa', 0.17, 'aura', 'linear');
 
 const hx = 0;
 const hy = -0.1;

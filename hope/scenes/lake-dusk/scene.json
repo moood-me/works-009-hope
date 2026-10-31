@@ -9,7 +9,11 @@
     "bounce": 0,
     "haze": 0,
     "vignette": 0.96,
-    "grain": 0.8
+    "grain": 0.86,
+    "grainBlend": "normal",
+    "vignetteInner": 0.25,
+    "vignetteOuter": 0.78,
+    "vignetteCentre": 0.49
   },
   "objects": [
     {
@@ -50,7 +54,8 @@
         "strength": 0.3,
         "fade": 0,
         "rough": 0,
-        "ripple": 0
+        "ripple": 0,
+        "sky": false
       },
       "uniforms": {
         "mirror": 0

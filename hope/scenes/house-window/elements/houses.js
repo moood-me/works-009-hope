@@ -25,4 +25,4 @@ e.layer('window', {}, c => {
   c.fillStyle = 'rgb(255,205,140)';
   c.fillRect(X(lit.x + lit.w * 0.35), Y(base - lit.h * 0.72), lit.w * 0.2 * D, lit.h * 0.18 * D);
 });
-e.light(X(lit.x + lit.w * 0.45), Y(base - lit.h * 0.62), L.WW * 0.12 * D, '#ffbe78', 0.5, 'lit');
+e.light(X(lit.x + lit.w * 0.45), Y(base - lit.h * 0.62), L.WW * 0.12 * D, '#ffbe78', 0.3, 'lit', 'linear');

@@ -9,12 +9,16 @@
     "bounce": 0,
     "haze": 0,
     "vignette": 0.96,
-    "grain": 0.8,
+    "grain": 0.86,
     "wind": [
       1,
       0,
       0.6
-    ]
+    ],
+    "grainBlend": "normal",
+    "vignetteInner": 0.25,
+    "vignetteOuter": 0.78,
+    "vignetteCentre": 0.49
   },
   "lights": [
     {
