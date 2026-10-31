@@ -60,4 +60,4 @@ function tuft(g, e) {
   });
 }
 
-return { A, HORIZON, EYE, COLOURS, base, dist, pineKind, tuft };
+return { A, HORIZON, EYE, COLOURS, base, dist, pineKind, pineSway, tuft };
